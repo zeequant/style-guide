@@ -1,6 +1,6 @@
 # Rules
 
-#### Prefer chaining
+## Prefer chaining
 ```JS
   // Wrong
   const groupedOrders = _.groupBy(orders, (orderItem) => orderItem.transaction_id);
@@ -13,9 +13,9 @@
     .value();
 ```
 
-#### Prefer explicit methods 
+## Prefer explicit methods 
 
-Use utility methods that conveys your logic that writing the logic imperatively.
+Use utility methods that conveys your logic rather than writing the logic imperatively.
 
 ```JS
   const names = ['a', 'b', 'c'];
@@ -32,29 +32,29 @@ Use utility methods that conveys your logic that writing the logic imperatively.
   });
 ```
 
-#### Conflicting objects:
+## Conflicting objects:
 ```JS
-	// Wrong:
-	var superCategory = "fire"
-	var superCategoryObject = _.find(CONFIG.***, ***)
+  // Wrong:
+  const superCategory = "fire"
+  const superCategoryObject = _.find(CONFIG.***, ***)
 
-	// Correct:
-	var superCategoryName = "fire"
-	var superCategoryConfig = _.find(CONFIG.***, ***)
+  // Correct:
+  const superCategoryName = "fire"
+  const superCategoryConfig = _.find(CONFIG.***, ***)
 ```
 
-#### Extracting Variables:
+## Extracting Variables:
 ```JS
-	// Wrong:
-	var inputEmail = 'abc@abc.com'
-	_.map(allowedEmails, (email) => { *** });
+  // Wrong:
+  const inputEmail = 'abc@abc.com'
+  _.map(allowedEmails, (email) => { *** });
 
-	// Correct
-	var inputEmail = 'abc@abc.com'
-	_.map(allowedEmails, (allowedEmail) => { *** });
+  // Correct
+  const inputEmail = 'abc@abc.com'
+  _.map(allowedEmails, (allowedEmail) => { *** });
 ```
 
-#### Random variable names
+## Random variable names
 ```JS
   // Wrong
   temp = get_house_price_in_usd(house_sqft, house_room_count)
@@ -75,13 +75,13 @@ Use utility methods that conveys your logic that writing the logic imperatively.
   house_price = house_price + expected_mean_house_price
 ```
 
-#### Encourage truth variable names
+## Encourage truth variable names
 ```JS
-	// Wrong
-	if (isDisabled) { ....
-	if (!isDisabled) { ...
+  // Wrong
+  if (isDisabled) { ....
+  if (!isDisabled) { ...
 
-	// Correct
-	if(isEnabled) { ....
-	if(!isEnabled) { ....
+  // Correct
+  if(isEnabled) { ....
+  if(!isEnabled) { ....
 ```

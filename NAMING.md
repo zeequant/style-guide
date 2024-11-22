@@ -12,9 +12,9 @@ For a variable, if someone asks
 What does that variable hold/contain??
 
 ```JS
-if (your_explanation === variable_name)
+if (your_explanation === variable_name) {
 	console.log('awesome')
-else {
+} else {
  	console.log('face palm');
 }
 ```
