@@ -17,7 +17,23 @@
 
 ## File Structuring/Organising
 - Top Level code files should clean/smaller. Bottom level files(in the call hierarchy), can be bigger.
+- File into global common folder if,
+  - Methods will be used outside the module.
+  - Methods are generic like capitalize/snakeCase
+- File into relevant folder/module if,
+  - Methods are only specific to that module.
 
-- If you are working on a feature and are extracting helpers. Name the helper depending on what the helper contains. You should not name the helper based on the feature you are working on. If you are working on login and you need a url generator function, do not put it in a file called loginHelper.js
+#### File Naming
+If you are working on a feature and are extracting helpers. Name the helper depending on what the helper contains. You should not name the helper based on the feature you are working on. If you are working on login and you need a url generator function, do not put it in a file called loginHelper.js
 
-- If the utility is very common and will be required in other places, put it outside in common folder. Otherwises keep the helper within the component or module itself. 
+- Name your file / module based on its contents or what it is doing? 
+- Do not name every file based on the current story you are doing!
+
+
+## Self Review Code (Before Merging/Issuing a PR):
+- Make your logic clearer, such that the code looks like pseudocode.
+- DRY the code. 
+- Extract code/functions into appropriate modules.
+- Rearrange files if required.
+- Rename variables so that they are more meaningful.
+- Extract / Inline variables.
