@@ -1,7 +1,9 @@
 # Style Guide
 
 [NAMING](NAMING.md)
+
 [RULES](RULES.md)
+
 [THESAURUS](THESAURUS.md)
 
 ## Rule of Thumb
