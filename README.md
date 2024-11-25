@@ -6,6 +6,8 @@
 
 [THESAURUS](THESAURUS.md)
 
+[THESAURUS](TESTING.md)
+
 ## Rule of Thumb
 - Use already decided terminology for the project.
 - Modules should be cohesive and decoupled

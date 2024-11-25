@@ -85,3 +85,47 @@ Use utility methods that conveys your logic rather than writing the logic impera
   if(isEnabled) { ....
   if(!isEnabled) { ....
 ```
+
+## Symmetrical Naming:
+```JS
+  // Wrong
+  const parser = {
+    parseProductCode: () => { ... },
+    parseQuantity: () => { ... },
+    tradingSymbolParse: () => { ... },
+  }
+
+  // Correct
+  const parser = {
+    parseProductCode: () => { ... },
+    parseQuantity: () => { ... },
+    parseTradingSymbol: () => { ... },
+  }
+```
+
+## Early Return instead of if else
+```JS
+  // Wrong
+  const fn = () => {
+    if (isValid()) {
+      if (isSafe()) {
+        return doWork();
+      } else {
+        return []
+      }
+    } else {
+      throw new Error('Not Valid');
+    }
+  }
+
+  // Correct
+  const fn = () => {
+    if (!isValid()) {
+      throw new Error('Not Valid');
+    }
+    if (!isSafe()) {
+      return [];
+    }
+    return doWork();
+  }
+```
