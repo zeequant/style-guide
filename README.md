@@ -6,7 +6,9 @@
 
 [THESAURUS](THESAURUS.md)
 
-[THESAURUS](TESTING.md)
+[TESTING](TESTING.md)
+
+[TYPESCRIPT](TYPESCRIPT.md)
 
 ## Rule of Thumb
 - Use already decided terminology for the project.

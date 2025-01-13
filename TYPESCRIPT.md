@@ -1,6 +1,55 @@
 # Typescript Guides
 
-## Discriminated
+## Types folder structure:
+If the types are required everywhere put them in 
+- src/types.ts
+- src/types/domain.ts
+- src/types/order.ts
+
+If the types are required only in a single folder, put the types file or directory in that folder itself.
+
+
+## All types/interfaces/enums should be in pascal case.
+
+```TS
+  // Wrong
+  type MODIFYORDER = string;
+  type productType = string;
+
+  // Correct
+  type ModifyOrder = string;
+  type ProductType = string;
+```
+
+## Prefer narrow string unions rather than string type
+```TS
+  // Wrong
+  interface Config {
+    showShow: string;
+  }
+
+  // Correct
+  interface Config {
+    showShow: 'true' | 'false';
+  }
+```
+
+## Prefer Enums instead of constants
+```TS
+  // Wrong
+  const orderType: Record<string, string> = {
+    'MARKET': 'MARKET',
+    'SL': 'SL'
+  };
+
+  // Correct
+  enum orderType = {
+    MARKET = 'MARKET';
+    SL =  'SL';
+  }
+```
+
+## Prefer Discriminated Union
 ```
     interface HeaderSection {
       type: 'header';
