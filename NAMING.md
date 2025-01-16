@@ -30,6 +30,11 @@ A direct translation of formulas into code
 - userGroup
 - userCollection
 
+## Maps:
+- userIdToUser
+- userIdToUserMap
+- usersByUserId
+
 ```JS
 const users = [new User()];
 ```
