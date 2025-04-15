@@ -88,3 +88,7 @@ https://blog.logrocket.com/handling-date-strings-typescript/
   export type YYYYMMDDString = Brand<string, 'YMDString'>;
   export type HHMMSString = Brand<string, 'HMSString'>;
 ```
+
+## More guidelines
+
+https://mkosir.github.io/typescript-style-guide/#introduction
